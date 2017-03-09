@@ -41,6 +41,7 @@ class Activities(models.Model):
     state_ranking = models.IntegerField()
     record = models.CharField(max_length=255)
     year = models.DateField()
+    size = models.CharField(max_length=255)
 
 class Funding(models.Model):
     school = models.ForeignKey(School)
