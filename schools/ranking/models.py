@@ -24,3 +24,8 @@ class TestScores(models.Model):
     school = models.ForeignKey(School)
     test_type = models.ForeignKey(TestType)
     score = models.FloatField()
+
+class AreaCrime(models.Model):
+     school = models.ForeignKey(School)
+     year = models.DateField()
+     
