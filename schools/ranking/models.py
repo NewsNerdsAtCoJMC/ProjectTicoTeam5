@@ -28,4 +28,19 @@ class TestScores(models.Model):
 class AreaCrime(models.Model):
      school = models.ForeignKey(School)
      year = models.DateField()
-     
+     rate = models.FloatField()
+
+class ActivityType(models.Model):
+    type = models.CharField(max_length=255)
+    def __str__(self):
+        return self.type
+
+class Activities(models.Model):
+    school = models.ForeignKey(School)
+    acivity_type = models.ForeignKey(ActivityType)
+    state_ranking = models.IntegerField()
+    year = models.DateField()
+
+class Funding(models.Model):
+    school = models.ForeignKey(School)
+    amount = models.IntegerField()
