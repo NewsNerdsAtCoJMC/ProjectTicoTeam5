@@ -39,6 +39,7 @@ class Activities(models.Model):
     school = models.ForeignKey(School)
     acivity_type = models.ForeignKey(ActivityType)
     state_ranking = models.IntegerField()
+    record = models.CharField(max_length=255)
     year = models.DateField()
 
 class Funding(models.Model):
