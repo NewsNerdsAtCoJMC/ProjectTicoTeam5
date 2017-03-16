@@ -5,8 +5,8 @@ class School(models.Model):
     address = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
-    description = models.TextField()
-    photo = models.ImageField(XXXXXXX)
+    description = models.TextField(null = True, blank = True)
+    photo = models.ImageField(null = True, blank = True)
     def __str__(self):
         return self.name
 
@@ -23,8 +23,12 @@ class TestType(models.Model):
 class TestScores(models.Model):
     school = models.ForeignKey(School)
     test_type = models.ForeignKey(TestType)
-    score = models.FloatField()
-
+    below = models.FloatField()
+    meeting = models.FloatField()
+    exceeding = models.FloatField()
+    def __str__(self):
+        string = self.school.name + " " + self.test_type.type + " scores"
+        return string
 class AreaCrime(models.Model):
      school = models.ForeignKey(School)
      year = models.DateField()
