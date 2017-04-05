@@ -12,7 +12,7 @@ class School(models.Model):
 
 class Enrollment(models.Model):
     school = models.ForeignKey(School)
-    year = models.IntegerField()
+    year = models.CharField(max_length=255)
     total_enrollment = models.IntegerField()
 
 class TestType(models.Model):
