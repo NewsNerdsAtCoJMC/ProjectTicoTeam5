@@ -45,7 +45,7 @@ class Activities(models.Model):
     state_ranking = models.IntegerField()
     playoffs = models.CharField(max_length=255)
     record = models.CharField(max_length=255)
-    year = models.DateField()
+    year = models.CharField(max_length=255)
     size = models.CharField(max_length=255)
 
 class Funding(models.Model):
