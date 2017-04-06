@@ -1,0 +1,305 @@
+/* Grid */
+.container-fluid {
+    max-width: 100%; 
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    flex-wrap:wrap;
+}
+/* basic styles*/
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+.logo {
+    max-width: 200px;
+    margin: 40px;
+}
+.schoolicon{
+    max-width:80px;
+    
+}
+.marquee {
+    background-image: url(http://morganbruggeman.createunl.com/assignments/img/school.png);
+    padding: 0;
+    margin: 0;
+    
+}
+.adjust {
+    margin-top: 100px;
+}
+
+.toprow{
+
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-left-color: #fff;
+}
+
+.button-spacing{
+    
+    padding-bottom: 20px;
+}
+
+.bottom-spacing {
+    padding-bottom: 40px;
+}
+.spacing {
+    padding:40px 0px;
+}
+
+img{
+    
+    width:100%;
+    padding:0%;
+    
+    
+}
+.map {
+    width:80%;
+}
+
+.gray {
+    
+    background-color:#ececec;
+}
+
+.white {
+    background-color:#fff;
+}
+
+
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #0C5579;
+    font-size: 1.2em;
+}
+
+.button:hover {
+    background-color:steelblue;
+}
+
+.right {
+    text-align:right;
+}
+
+.red {
+    
+    background-color:red;
+}
+
+.subhead {
+    font-size: 1.5em;
+    font-weight:bold;
+}
+
+.news-subhead{
+    font-size: 1em;
+    font-weight:bold;
+    
+}
+
+.sidebar-image{
+    
+width:90%;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+
+/* Navigation */
+* {margin: 0;padding: 0;outline: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*:after, *:before { -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {  display: block;}
+html {font-size: 100%;height: auto !important;height: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.clear {display: block;	}
+.clear::after {clear: both;content: ".";display: block;height: 1px;visibility: hidden;}
+	
+/*GENERIC STYLES for Navigation*/
+body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-family: Arial, sans-serif;font-size: 12px;font-weight: 200;height: auto !important;height: 100%;line-height: 1.2rem;min-height: 100%;}
+/*NAV*/
+	header {
+		background: #0C5579;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+		display: block;
+		position: inherit;
+		width: 100%;
+		z-index: 1000;
+        
+	}
+	
+	header > nav > ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+		header > nav > ul > li {
+			flex: 0 1 auto;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			transition: all linear 0.1s;	
+		}
+		
+			header > nav > ul > li:hover {
+				background: steelblue;
+			}
+			
+			header > nav > ul > li a + div {
+				background: #fff;
+				border-radius: 0 0 2px 2px;
+				box-shadow: 0 3px 10px rgba(0,0,0,.08);
+				display: none;
+				font-size: .5em;
+				position: absolute;
+				width: 195px;
+			}
+			
+				header > nav > ul > li:hover a + div {
+					display: block;
+				}
+				
+				header > nav > ul > li a + div > ul {
+					list-style-type: none;	
+				}
+				
+					header > nav > ul > li a + div > ul > li {
+						margin: 0;
+						padding: 0;
+					}
+					
+						header > nav > ul > li a + div > ul > li > a {
+							color: #0C5579;
+							display: block;	
+							font-size: .75rem;
+							letter-spacing: 1.5px;
+							padding: .25rem 1.5rem;
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+						
+							header > nav > ul > li a + div > ul > li:hover > a {
+								background-color: steelblue;
+                                color:white;
+							}
+	
+			header > nav > ul > li > a {
+				align-items: flex-start;
+				color: #fff;
+				display: flex;
+				font-size: 1rem;
+				font-weight: 200;
+				letter-spacing: 1px;
+				max-width: 130px;
+				padding: 1rem 1.5rem;
+				text-decoration: none;
+				text-shadow: 0 1px 1px rgba(0,0,0,.1);
+				transition: all linear 0.1s;
+			}
+			
+				header > nav > ul > li > a > div > span {
+					color: rgba(255,255,255,.75);
+					display: block;
+					font-family: Arial, sans-serif;
+					font-size: .7rem;	
+					font-style: italic;
+					line-height: 1rem;
+					max-width: 260px;
+				}
+
+@media (min-width: 990px) {
+  header > nav > ul > li > a {
+    max-width: 500px;
+    font-size: 1rem;
+	line-height: 2rem;
+  }
+  
+  header > nav > ul > li > a > div > span {
+	  margin: 4px 0 0;
+  }
+  
+}
+
+/* hide related news section on smaller screen sizes*/
+
+@media (max-width: 900px) {
+.related{
+     clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+}
+  
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* Home page table css */
+table {width: 100%;padding:20px 0px;text-align:center;}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:bottom}
+.tg .tg-4aks{background-color:#0C5579;color:#ffffff;vertical-align:top}
+
+.tg .tg-4akt{background-color:#03688c;color:#ffffff;vertical-align:bottom}
+
+.tg .tg-yw49{vertical-align:bottom; font-size:2em;font-weight:bold; font-family:arial, sans-serif;padding-bottom:10px}
+
+
+/* Drop Down Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 145px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color:#0C5579;
+    text-align:center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color:white;
+    
+}
+
+.dropdown:hover{
+    background-color:steelblue;
+}
+
+.dropdown-content > a > p:hover {
+    background-color:steelblue;
+    color:white;
+
+}
+/* INDIVIDUAL SCHOOL DATA TABLE CSS */
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 10px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 10px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-s6z2{text-align:center}
+.tg .tg-1a3d{font-weight:bold;font-size:32px;text-align:center;border:none;}
