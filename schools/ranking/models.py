@@ -51,3 +51,15 @@ class Activities(models.Model):
 class Funding(models.Model):
     school = models.ForeignKey(School)
     amount = models.IntegerField()
+
+class StatType(models.Model):
+    type = models.CharField(max_length=255)
+    def __str__(self):
+        return self.type
+
+class Statistics(models.Model):
+    school = models.ForeignKey(School)
+    stat_type = models.ForeignKey(StatType)
+    frlunch = models.CharField(max_length=225)
+    gifted = models.CharField(max_length=225)
+    specialed = models.CharField(max_length=225)
