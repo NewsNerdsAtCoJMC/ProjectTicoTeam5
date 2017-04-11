@@ -51,3 +51,5 @@ class Activities(models.Model):
 class Funding(models.Model):
     school = models.ForeignKey(School)
     amount = models.IntegerField()
+
+    
