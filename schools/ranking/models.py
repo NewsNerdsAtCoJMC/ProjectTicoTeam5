@@ -33,11 +33,6 @@ class TestScores(models.Model):
         string = self.school.name + " " + self.test_type.type + " scores"
         return string
 
-class AreaCrime(models.Model):
-     school = models.ForeignKey(School)
-     year = models.DateField()
-     rate = models.FloatField()
-
 class ActivityType(models.Model):
     type = models.CharField(max_length=255)
     def __str__(self):
@@ -51,10 +46,6 @@ class Activities(models.Model):
     record = models.CharField(max_length=255)
     year = models.CharField(max_length=255)
     size = models.CharField(max_length=255)
-
-class Funding(models.Model):
-    school = models.ForeignKey(School)
-    amount = models.IntegerField()
 
 class StatType(models.Model):
     type = models.CharField(max_length=255)
