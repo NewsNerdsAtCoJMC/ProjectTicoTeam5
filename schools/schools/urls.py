@@ -19,6 +19,7 @@ from ranking import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^schools/$', views.schools_list),    
+    url(r'^schools/$', views.schools_list),
+    url(r'^schools/(?P<pk>\d+)/$', views.schools_detail),        
     url(r'^admin/', admin.site.urls),
 ]

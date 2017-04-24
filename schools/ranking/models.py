@@ -9,6 +9,9 @@ class School(models.Model):
     photo = models.ImageField(null = True, blank = True)
     def __str__(self):
         return self.name
+    def get_absolute_url(self):
+        return "/schools/%s/" % self.id
+
 
 class Enrollment(models.Model):
     school = models.ForeignKey(School)
@@ -29,6 +32,7 @@ class TestScores(models.Model):
     def __str__(self):
         string = self.school.name + " " + self.test_type.type + " scores"
         return string
+
 class AreaCrime(models.Model):
      school = models.ForeignKey(School)
      year = models.DateField()

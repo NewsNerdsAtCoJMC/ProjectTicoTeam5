@@ -29,7 +29,7 @@
 		 <tr>
 		   <th class="tg-yw49 toprow" style="vertical-align:bottom;"><br>2016</th>
        {% for object in schools %}
-		   <th class="tg-yw4l toprow" style="vertical-align:bottom;"><a href="#">{{ object.name }}</a></th>
+		   <th class="tg-yw4l toprow" style="vertical-align:bottom;"><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></th>
        {% endfor %}
 		 </tr>
 		 <tr>
@@ -42,13 +42,10 @@
 		   <td class="tg-yw4l">data</td>
 		 </tr>
 		 <tr>
-		   <td class="tg-4aks">Test Scores<br></td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
+		   <td class="tg-4aks">Reading Scores<br></td>
+			 {% for object in reading_scores %}
+		   <td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+			 {% endfor %}
 		 </tr>
 		 <tr>
 		   <td class="tg-4aks">Funding<br></td>
@@ -62,7 +59,7 @@
 		 <tr>
 		   <td class="tg-4aks">Crime Rates<br></td>
        {% for object in schools %}
-		   <td class="tg-yw4l">{{ object.areacrime_set.rate }}<br></td>
+		   <td class="tg-yw4l">{% for relobj in object.areacrime.all %}{{ relobj }}{% endfor %}<br></td>
        {% endfor %}
 		 </tr>
 		 <tr>
