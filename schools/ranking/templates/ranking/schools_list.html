@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+			<div class="row adjust">
+			 <div class="col-xs-4 col-xs-offset-2">
+			   <p class="subhead"> DATA COMPARISON </p>
+			 </div>
+		   <div class="col-xs-4 right center-xs">
+		   <div class="dropdown">
+			<span class="button">SCHOOL YEAR</span>
+			<div class="dropdown-content">
+			  <a href="index.html"><p>2016</p></a>
+			  <a href="#"><p>2015</p></a>
+			  <a href="#"><p>2014</p></a>
+			  <a href="#"><p>2013</p></a>
+			  <a href="#"><p>2012</p></a>
+			  <a href="#"><p>2011</p></a>
+			  <a href="#"><p>2010</p></a>
+			  <a href="#"><p>2009</p></a>
+			 </div>
+		</div>
+	</div>
+</div>
+<div class="row spacing">
+	<div class="col-xs-8 col-xs-offset-2">
+
+	   <table class="tg">
+		 <tr>
+		   <th class="tg-yw49 toprow" style="vertical-align:bottom;"><br>2016</th>
+       {% for object in schools %}
+		   <th class="tg-yw4l toprow" style="vertical-align:bottom;"><a href="#">{{ object.name }}</a></th>
+       {% endfor %}
+		 </tr>
+		 <tr>
+		   <td class="tg-4aks">Graduation Rates<br></td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		 </tr>
+		 <tr>
+		   <td class="tg-4aks">Test Scores<br></td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		 </tr>
+		 <tr>
+		   <td class="tg-4aks">Funding<br></td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		 </tr>
+		 <tr>
+		   <td class="tg-4aks">Crime Rates<br></td>
+       {% for object in schools %}
+		   <td class="tg-yw4l">{{ object.areacrime_set.rate }}<br></td>
+       {% endfor %}
+		 </tr>
+		 <tr>
+		   <td class="tg-4aks">Poverty Rates<br></td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		   <td class="tg-yw4l">data</td>
+		 </tr>
+	   </table>
+	</div>
+</div>
+<div class="row spacing gray">
+	<div class="col-xs-8 col-xs-offset-2">
+		<p class="subhead center-xs">GRADUATION RATES</p><br/>
+			<img src="img/Graph.png">
+	</div>
+</div>
+	<div class="row spacing">
+		<div class="col-xs-8 col-xs-offset-2">
+			<p class="subhead center-xs">DISTRICT MAP</p><br/>
+			<img src="img/districtmap.png">
+		</div>
+	 </div>
+<div class="row spacing">
+	<div class="col-xs-8 col-xs-offset-2 center-xs">
+		<a href="news.html"><p class="button">NEWS &#187;</p></a>
+	</div>
+</div>
+{% endblock %}
