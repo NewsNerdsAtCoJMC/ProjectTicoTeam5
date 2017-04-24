@@ -14,6 +14,6 @@ def schools_list(request):
 
 def schools_detail(request, pk):
     school = School.objects.get(id=pk)
-    reading_score = TestScores.objects.filter(school=school)
+    reading_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Reading")
     context = {'school': school, 'reading_score': reading_score}
     return render(request, 'ranking/schools_detail.html', context)
