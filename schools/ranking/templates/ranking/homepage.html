@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <div class="row spacing">
 	<div class="col-xs-6 col-xs-offset-2">
 		<p class="subhead">DISTRICT NEWS</p><br/>
-		<img src="img/districtoffice.png">
+		<img src={% static "img/districtoffice.png" %}>
 	</div>
 
 	<div class="col-xs-2 end-xs related">
 		<p class="news-subhead center-xs">Related</p><br/>
       {% for object in district_news %}
-		<a href="{{ object.get_absolute_url }}"><img class="sidebar-image" src="img/districtoffice.png"></a>
+		<a href="{{ object.get_absolute_url }}"><img class="sidebar-image" src={% static "img/districtoffice.png"%}></a>
 		<p>{{ object.headline }}</p>
     {% endfor %}
 	</div>

@@ -12,7 +12,8 @@ def schools_list(request):
     writing_scores = TestScores.objects.filter(test_type__type="NeSA Writing").order_by('school__name')
     math_scores = TestScores.objects.filter(test_type__type="NeSA Math").order_by('school__name')
     science_scores = TestScores.objects.filter(test_type__type="NeSA Science").order_by('school__name')
-    context = {'schools': schools, 'reading_scores': reading_scores, 'writing_scores': writing_scores, 'math_scores': math_scores, 'science_scores': science_scores}
+    frlunch = Statistics.objects.filter(stat_type__type="Frlunch").order_by('school__name')
+    context = {'schools': schools, 'reading_scores': reading_scores, 'writing_scores': writing_scores, 'math_scores': math_scores, 'science_scores': science_scores, 'frlunch': frlunch}
     return render(request, 'ranking/schools_list.html', context)
 
 
