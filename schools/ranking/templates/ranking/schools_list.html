@@ -65,33 +65,24 @@
 			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
 			{% endfor %}
 		</tr>
-     <tr>
-		   <td class="tg-4aks">Special Ed<br></td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		 </tr>
-     <tr>
-		   <td class="tg-4aks">Gifted<br></td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		 </tr>
-		 <tr>
-		   <td class="tg-4aks">Free and Reduced Lunch Rates<br></td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		   <td class="tg-yw4l">data</td>
-		 </tr>
+		<tr>
+			<td class="tg-4aks">Special Ed<br></td>
+			{% for object in specialed %}
+			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+			{% endfor %}
+		</tr>
+		<tr>
+		 <td class="tg-4aks">Gifted<br></td>
+		 {% for object in gifted %}
+		 <td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+		 {% endfor %}
+	 </tr>
+	 <tr>
+		 <td class="tg-4aks">Free and Reduced Lunch<br></td>
+		 {% for object in frlunch %}
+		 <td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+		 {% endfor %}
+	 </tr>
 	   </table>
 	</div>
 </div>
