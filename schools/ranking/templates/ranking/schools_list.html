@@ -67,20 +67,20 @@
 		</tr>
 		<tr>
 			<td class="tg-4aks">Special Ed<br></td>
-			{% for object in specialed %}
-			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+			{% for object in stats %}
+			<td class="tg-yw4l">{{ object.specialed }}</td><br></td>
 			{% endfor %}
 		</tr>
 		<tr>
 		 <td class="tg-4aks">Gifted<br></td>
-		 {% for object in gifted %}
-		 <td class="tg-yw4l">{{ object.gifted }}%</td><br></td>
+		 {% for object in stats %}
+		 <td class="tg-yw4l">{{ object.gifted }}</td><br></td>
 		 {% endfor %}
 	 </tr>
 	 <tr>
 		 <td class="tg-4aks">Free and Reduced Lunch<br></td>
-		 {% for object in frlunch %}
-		 <td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+		 {% for object in stats %}
+		 <td class="tg-yw4l">{{ object.frlunch }}</td><br></td>
 		 {% endfor %}
 	 </tr>
 	   </table>
