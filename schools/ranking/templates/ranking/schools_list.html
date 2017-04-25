@@ -48,6 +48,24 @@
 			 {% endfor %}
 		 </tr>
 		 <tr>
+ 			<td class="tg-4aks">Math Scores<br></td>
+ 			{% for object in math_scores %}
+ 			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+ 			{% endfor %}
+ 		</tr>
+		<tr>
+			<td class="tg-4aks">Science Scores<br></td>
+			{% for object in science_scores %}
+			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+			{% endfor %}
+		</tr>
+		<tr>
+			<td class="tg-4aks">Writing Scores<br></td>
+			{% for object in writing_scores %}
+			<td class="tg-yw4l">{{ object.meeting }}%</td><br></td>
+			{% endfor %}
+		</tr>
+		 <tr>
 		   <td class="tg-4aks">Crime Rates<br></td>
        {% for object in schools %}
 		   <td class="tg-yw4l">{{ object.areacrime_set.rate }}<br></td>
