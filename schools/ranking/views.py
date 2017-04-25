@@ -15,14 +15,11 @@ def schools_list(request):
     context = {'schools': schools, 'reading_scores': reading_scores, 'writing_scores': writing_scores, 'math_scores': math_scores, 'science_scores': science_scores}
     return render(request, 'ranking/schools_list.html', context)
 
-<<<<<<< HEAD
 
 
-=======
 def schools_detail(request, pk):
     school = School.objects.get(id=pk)
     reading_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Reading")
->>>>>>> origin/master
     math_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Math")
     science_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Science")
     writing_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Writing")
