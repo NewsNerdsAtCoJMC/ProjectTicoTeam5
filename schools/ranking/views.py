@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from ranking.models import School, TestScores, Statistics
+from ranking.models import School, TestScores, Statistics, Enrollment
 
 def index(request):
     context = {}
@@ -20,10 +20,11 @@ def schools_list(request):
 
 def schools_detail(request, pk):
     school = School.objects.get(id=pk)
+    enrollment = Enrollment.objects.filter(school=school).filter(year="2015-2016")
     reading_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Reading")
     math_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Math")
     science_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Science")
     writing_score = TestScores.objects.filter(school=school).filter(test_type__type="NeSA Writing")
     stats = Statistics.objects.filter(school=school)
-    context = {'school': school, 'reading_score': reading_score, 'math_score': math_score, 'science_score': science_score, 'writing_score': writing_score, 'stats':stats}
+    context = {'school': school, 'reading_score': reading_score, 'math_score': math_score, 'science_score': science_score, 'writing_score': writing_score, 'stats':stats, 'enrollment': enrollment}
     return render(request, 'ranking/schools_detail.html', context)
