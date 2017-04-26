@@ -16,7 +16,7 @@
 		<h2>General</h2>
 		<p class="no_space_between_lines">Address: {{ school.address }}</p>
 		<p class="no_space_between_lines">Enrollment: {% for object in enrollment %}{{ object.total_enrollment }}{% endfor %}</p>
-		<h4 class="button button-spacing"><a href="#">WEBSITE</a></h4>
+		<h4 class="button button-spacing"><a href="{{ school.description }}">WEBSITE</a></h4>
 	</div>
 </div>
 
