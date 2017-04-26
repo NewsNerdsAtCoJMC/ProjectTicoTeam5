@@ -6,7 +6,7 @@ class School(models.Model):
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
     description = models.TextField(null = True, blank = True)
-    photo = models.ImageField(null = True, blank = True)
+    photo = models.ImageField(upload_to="media", null=True, blank=True)
     def __str__(self):
         return self.name
     def get_absolute_url(self):

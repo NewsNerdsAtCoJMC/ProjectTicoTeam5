@@ -10,7 +10,7 @@
 
 <div class="row bottom-spacing">
 	<div class="col-xs-4 col-xs-offset-2">
-		<img src="img/districtoffice.png">
+		<img src="{% if school.photo %}{{ school.photo.url }}{% else %}{% endif %}">
 	</div>
 	<div class="col-xs-5">
 		<h2>General</h2>
@@ -74,7 +74,7 @@
 <div class="row">
 	<div class="col-xs-8 col-xs-offset-2">
 
-		<img class="map" src="img/districtoffice.png">
+		<img class="map" src="/static/img/districtoffice.png" />
 	</div>
 </div>
 
